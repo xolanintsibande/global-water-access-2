@@ -184,7 +184,7 @@ A summary sheet called <b>Global Water Access Report (2000–2020)</b> was creat
 
 The analysis included:
 
-<strong>Year Representation Analysis</strong>
+<b>Year Representation Analysis</b>
 
 Statistics calculated:
 
@@ -198,7 +198,7 @@ Statistics calculated:
 
 A histogram was created to visualize year distribution across countries.
 
-Annual Rate of Change (ARC)
+<b>Annual Rate of Change (ARC)</b>
 
 The Annual Rate of Change (ARC) was used to measure improvement in water access.
 
@@ -216,7 +216,7 @@ ARC values were calculated for:
 
 These metrics represent annual percentage point changes in water access.
 
-# Access Classification Analysis
+# Access Classification Analysis  
 
 Countries were categorized into groups based on ARC results:
 
@@ -242,7 +242,8 @@ A histogram was created to visualize the distribution of observation years acros
 
 This helped confirm that data points exist across the 2000–2020 time range.
 
-Annual Rate of Change Distribution
+<b>Annual Rate of Change Distribution</b>
+
 Histograms were created to visualize the distribution of :
 
 - National ARC
