@@ -305,21 +305,3 @@ Lookup Functions
 Pivot Tables
 
 Exploratory Data Analysis
-
-# Skills Demonstrated
-
-Data Cleaning
-
-Exploratory Data Analysis
-
-Time Series Analysis
-
-Statistical Analysis
-
-Data Visualization
-
-Data Validation
-
-Spreadsheet Analytics
-
-Data Storytelling
