@@ -40,10 +40,9 @@ Dataset:
 Estimates on the Use of Water (2000–2020)
 
 Official dataset source:
-https://washdata.org⁠�
+https://drive.google.com/file/d/1p6j3MJz-eWaWsIfbPTHQAfUR-Ecm5voW/view?usp=sharing
 
-[(image)]
-
+Clean  dataset : https://docs.google.com/spreadsheets/d/19V-E28o6QDEpGCdRJh5gTtqQ5pPgvQRanQ8xtUJmdqk/edit?usp=sharing
 
 The dataset contains 16 original features, including:
 
