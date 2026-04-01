@@ -1,34 +1,24 @@
 # 🌍 Global Access to Drinking Water (2000–2020)
 
-UN Sustainable Development Goal 6
+UN Sustainable Development Goal 6: Clean Water and Sanitation
+
+---
+
+## 📌 Project Summary
 
 This project analyzes global access to basic drinking water services between 2000 and 2020 using data from the WHO/UNICEF Joint Monitoring Programme (JMP).
 
-The analysis investigates how access to drinking water has changed across countries, regions, and population groups (national, rural, and urban) and evaluates global progress toward United Nations Sustainable Development Goal 6: Clean Water and Sanitation
+The analysis evaluates how access has changed across :
 
-
-## Overview
-
-Access to safe drinking water remains one of the most important global development challenges.
-This project analyzes global water access trends using the WHO/UNICEF Joint Monitoring Programme (JMP) dataset covering 2000–2020.
-
-The goal of the analysis was to investigate how access to basic drinking water services has changed over time across national, rural, and urban populations, and to evaluate progress toward United Nations Sustainable Development Goal 6 (Clean Water and Sanitation).
-
-This project was completed as part of the ALX Data Analytics Program and demonstrates practical data analysis skills including:
-
-- Data cleaning
-
-- Data validation
-
-- Feature engineering
-
-- Time-series analysis
-
-- Statistical analysis
-
-- Data visualization
-
-- Exploratory data analysis
+- National populations
+  
+- Rural populations
+  
+- Urban populations
+  
+- Global regions
+  
+It focuses on measuring progress over time and identifying inequalities in access, particularly between rural and urban populations.
 
 
 ## Dataset
@@ -39,10 +29,10 @@ WHO / UNICEF Joint Monitoring Programme (JMP)
 Dataset:
 Estimates on the Use of Water (2000–2020)
 
-Official dataset source:
+Official dataset :
 https://drive.google.com/file/d/1p6j3MJz-eWaWsIfbPTHQAfUR-Ecm5voW/view?usp=sharing
 
-Clean  dataset : https://docs.google.com/spreadsheets/d/19V-E28o6QDEpGCdRJh5gTtqQ5pPgvQRanQ8xtUJmdqk/edit?usp=sharing
+Clean dataset : https://docs.google.com/spreadsheets/d/19V-E28o6QDEpGCdRJh5gTtqQ5pPgvQRanQ8xtUJmdqk/edit?usp=sharing
 
 The dataset contains 16 original features, including:
 
@@ -82,68 +72,58 @@ The objective of this analysis was to answer the following questions:
 
 # Data Challenges
 
-Before analysis could begin, several <strong>data quality issues</strong> were identified.
+- Irregular time intervals across countries
 
-1. Irregular Year Representation
-The dataset title indicates coverage from 2000–2020, but not every country has data for every year.
-
-This created challenges when comparing changes across time.
-
-2. Duplicate Records
-
-During feature creation, some rows produced a year difference value of zero, indicating duplicate observations for the same country and year.
-
-3. Missing Values
-   
-Some cells contained the text “null”, which caused spreadsheet formulas to produce #VALUE! errors during calculations.
-
-4. Invalid Percentage Values
-   
-Some water access percentages slightly exceeded 100%, which is not logically possible for population access indicators.
-
-These issues required a structured data cleaning process before performing analysis.
+- Duplicate records (identified when year difference = 0)
+  
+- Missing values stored as "null" causing calculation errors
+  
+- Invalid percentages exceeding 100%
+  
+- Pivot table errors (#DIV/0!) due to missing values
 
 
 # Data Cleaning Process
 
-Step 1 — Sorting the Dataset
+<b>Step 1 Sorting the Dataset</b>
+
 The dataset was sorted by:
 
 Country name
 
-Year (ascending)
+Year <b>(ascending)</b>
 
 This ensured that consecutive rows represented different years for the same country, allowing change over time to be calculated.
 
-Step 2 — Creating a Year Difference Feature
+<b>Step 2 Creating a Year Difference Feature</b>
 
 A new column called y_diff was created to calculate the difference between two observation years.
 Formula logic:
 
-- y_diff = year(n+1) − year(n)
+`y_diff = year(n+1) − year(n)`
 
 
 This calculation was only performed when the country name in both rows matched.
 
-Step 3 — Identifying Duplicate Rows
+<b>Step 3 Identifying Duplicate Rows</b>
 
 If the calculated year difference equaled zero, this indicated duplicate records.
 
 Duplicate rows were identified and removed to ensure accurate calculations.
 
-Step 4 — Handling Missing Values
+<b>Step 4 Handling Missing Values</b>
 
 Rows containing “null” values caused formula errors.
 
 To resolve this, formulas were wrapped using:
 
-- IFERROR()
+`IFERROR()`
 
 This ensured that invalid calculations returned null values instead of errors.
 
-Step 5 — Correcting Invalid Percentages
+<b>Step 5 Correcting Invalid Percentages</b>
 
-Some water access values exceeded 100%.
+Some water access values <b>exceeded 100%</b>.
 
 To address this, new rounded features were created:
 
@@ -175,7 +155,7 @@ Several additional variables were created to support deeper analysis.
 | ARC_diff | Difference between rural and urban annual rate of change values |
 | region | Geographic region of each country |
 
-After cleaning and feature creation, the dataset contained 28 analytical features.
+After cleaning and feature creation, the dataset contained <b>28 analytical features.</b>
 
 # Analysis
 
@@ -187,23 +167,23 @@ The analysis included:
 
 Statistics calculated:
 
-- Minimum year
+- Minimum year : 1 year
   
-- Maximum year
+- Maximum year : 5 years 
   
-- Average difference between observations
-  
+- Average difference ~ 4.80 years
+    
 - Distribution of years across the dataset
 
-A histogram was created to visualize year distribution across countries.
+This confirms that data was not collected annually, requiring adjusted time-based calculations.
 
 <b>Annual Rate of Change (ARC)</b>
 
-The Annual Rate of Change (ARC) was used to measure improvement in water access.
+ARC measures yearly improvement in water access (percentage points).
 
 Formula used:
 
-- ARC = (value_year2 − value_year1) / (year2 − year1)
+`ARC = (value_year2 − value_year1) / (year2 − year1)`
 
 ARC values were calculated for:
 
@@ -213,11 +193,11 @@ ARC values were calculated for:
 
 - Urban populations
 
-These metrics represent annual percentage point changes in water access.
-
 # Access Classification Analysis  
 
 Countries were categorized into groups based on ARC results:
+
+This helped identify where water access is improving or declining.
 
 - Countries with no data
 
@@ -229,11 +209,16 @@ Countries were categorized into groups based on ARC results:
 
 - Countries where ARC < 0 (decline)
 
-This helped identify where water access is improving or declining.
+<b>Interpretation :</b>
+
+- More countries are improving than declining
+
+- Urban areas have more countries at full access levels
+
+- Rural areas still lag behind but are improving faster
 
 # Data Visualizations
 
-Several charts were created to explore the data.
 
 <b>Year Distribution</b>
 
@@ -261,17 +246,35 @@ This visualization highlights inequalities between population groups.
 
 <b>Regional Progress Comparison</b>
 
-A regional analysis chart was created to compare:
+Key Regional Insights:
 
-- National ARC
+<b>Sub-Saharan Africa</b>
 
-- Rural ARC
+- Highest ARC_n: 0.5687
 
-- Geographic region
+- Indicates strong improvement but still lower overall access
 
-- Population size
+<b>South Asia</b>
 
-This visualization helped identify which regions are improving fastest.
+High improvement: ARC_n ~0.4802
+
+<b>North America</b>
+
+- Very low ARC values (~0.017)
+
+- Indicates already saturated access levels
+
+<b>Global Average ARC</b>
+
+National: 0.2767
+Urban: 0.1548
+Rural: 0.4845
+
+<b>Interpretation :</b>
+
+- Developing regions show faster growth
+  
+- Developed regions show minimal change due to already high access
 
 # Key Insights
 
