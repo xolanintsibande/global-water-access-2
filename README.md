@@ -217,34 +217,8 @@ This helped identify where water access is improving or declining.
 
 - Rural areas still lag behind but are improving faster
 
-# Data Visualizations
-
-
-<b>Year Distribution</b>
-
-A histogram was created to visualize the distribution of observation years across the dataset.
-
-This helped confirm that data points exist across the 2000–2020 time range.
-
-<b>Annual Rate of Change Distribution</b>
-
-Histograms were created to visualize the distribution of :
-
-- National ARC
-
-- Rural ARC
-
-- Urban ARC
-
-These charts helped identify countries with rapid improvement or decline in water access.
-
-<b>Rural vs Urban Change Comparison</b>
-
-A histogram of ARC_diff was created to show the difference between rural and urban water access improvements.
-
-This visualization highlights inequalities between population groups.
-
-<b>Regional Progress Comparison</b>
+  
+# Regional Progress Comparison
 
 Key Regional Insights:
 
@@ -276,6 +250,39 @@ Rural: 0.4845
   
 - Developed regions show minimal change due to already high access
 
+
+# Data Visualizations
+
+
+<b>Year Distribution</b>
+
+A histogram was created to visualize the distribution of observation years across the dataset.
+
+This helped confirm that data points exist across the 2000–2020 time range.
+
+<b>Annual Rate of Change Distribution</b>
+
+Histograms were created to visualize the distribution of :
+
+- National ARC
+
+- Rural ARC
+
+- Urban ARC
+
+These charts helped identify countries with rapid improvement or decline in water access.
+
+<b>Rural vs Urban Change Comparison</b>
+
+A histogram of ARC_diff was created to show the difference between rural and urban water access improvements.
+
+This visualization highlights inequalities between population groups.
+
+<b>Regional comparison</b>
+
+pivot table + visualization
+
+
 # Key Insights
 
 The analysis revealed several important trends:
@@ -292,18 +299,24 @@ The analysis revealed several important trends:
 
 # Tools Used
 
-Google Sheets
+- Google Sheets
 
-Data Cleaning
+- Data Cleaning
 
-Feature Engineering
+- Feature Engineering
 
-Statistical Analysis
+- Statistical Analysis
 
-Data Visualization
+- Data Visualization
 
-Lookup Functions
+- Lookup Functions
 
-Pivot Tables
+- Pivot Tables
 
-Exploratory Data Analysis
+- Exploratory Data Analysis
+
+# Conclusion
+
+- This project demonstrates how data can be used to evaluate global development challenges.
+
+- While progress has been made in improving access to drinking water, significant inequalities remain, particularly across regions and between rural and urban populations.
