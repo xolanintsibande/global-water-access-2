@@ -111,7 +111,7 @@ If the calculated year difference equaled zero, this indicated duplicate records
 
 Duplicate rows were identified and removed to ensure accurate calculations.
 
-[image alt](https://github.com/xolanintsibande/global-water-access-2/blob/800dad359820f7a52ed4f5c60641001c81176fc0/images/duplicate.png)
+![image alt](https://github.com/xolanintsibande/global-water-access-2/blob/800dad359820f7a52ed4f5c60641001c81176fc0/images/duplicate.png)
 
 <b>Step 4 Handling Missing Values</b>
 
