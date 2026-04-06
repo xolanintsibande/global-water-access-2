@@ -255,6 +255,7 @@ Rural: 0.4845
   
 - Developed regions show minimal change due to already high access
 
+![image alt](https://github.com/xolanintsibande/global-water-access-2/blob/8a2c5d4d6b1503dbd0edcdb2bfb4f490c1971a0c/images/summary_sheet.png)
 
 # Data Visualizations
 
