@@ -119,6 +119,9 @@ To resolve this, formulas were wrapped using:
 
 `IFERROR()`
 
+![alt images}(https://github.com/xolanintsibande/global-water-access-2/blob/586e021098ddc12476728a3fc8826f7906344f47/images/IFERROR().png)
+
+
 This ensured that invalid calculations returned null values instead of errors.
 
 <b>Step 5 Correcting Invalid Percentages</b>
